@@ -1,0 +1,145 @@
+:root{
+    --primary-color: rgb(80, 80, 80);
+    --secondary-color: rgb(44, 44, 44);
+    --thirdy-color: rgb(198, 198, 198);
+}
+body{
+   background-color: var(--secondary-color);
+
+    margin: 0;
+}
+
+
+header{
+    background-color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 7%;
+    border-radius: 120px;
+    margin: 15px;
+    
+}
+
+#ogretim{
+    font-size: 10px;
+    color: var(--thirdy-color);
+}
+#navbar{
+    font-size: 10px;
+    display: flex;
+    align-items: left;
+    justify-content: space-around;
+}
+#navbar>h1{
+    margin: 10px;
+    color: var(--thirdy-color);
+}
+#logo{
+    height: 100px;
+    padding: 15px 5%;
+    background-color: aliceblue;
+    border-radius: 60px;
+}
+.dpart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+    background-color: var(--thirdy-color);
+    padding: 10px 7%;
+    z-index: 6;
+}
+.dpart>img{
+    margin: 10px;
+    z-index: 15;
+}
+.tknk{
+    width: 50%;
+    border: 5px solid var(--secondary-color);
+    margin-left: 20px;
+    border-radius: 15px;
+}
+#mainpage{
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+}
+#mainpage::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url(img/anasayfa.jpg);
+    filter: brightness(.4);
+    z-index: 0;
+}
+.ddpart{
+    z-index: 3;
+    margin: 15px;
+}
+.ddpart>model-viewer{
+    width: 50vw;
+    height: 45vh;
+}
+model-viewer{
+    transition: 0.2s ease all;
+}
+model-viewer.normal{
+    transform: scale(1);
+}
+model-viewer.grow{
+    transform: scale(1.5);
+    z-index: 10;
+}
+model-viewer.shrink{
+    transform: scale(0.5);
+}
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px 5%;
+    gap: 10px;
+    border-radius: 40px;
+  }
+
+  #logo {
+    height: 60px;
+  }
+
+  #navbar {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+  }
+
+  #navbar > h1,
+  #ogretim > h1 {
+    font-size: 10px;
+    margin: 5px 0;
+  }
+
+  .ddpart > model-viewer,
+  .dpart model-viewer {
+    width: 90vw !important;
+    height: 40vh !important;
+  }
+
+  .dpart {
+    flex-direction: column;
+    margin: 20px 0;
+  }
+
+  .tknk {
+    width: 90vw;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}

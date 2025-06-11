@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uydu</title>
+   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+      <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin: 40px;
+      
+    }
+    model-viewer {
+      width: 600px;
+      height: 400px;
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+    <header>
+        <img id="logo" src="img/okullogo.png" alt="">
+        <div id="navbar">
+            <h1>Endüstriyel Tasarım Bölümü
+            </h1>
+            <h1>Endüstri Ürünleri Tasarımı Stüdyo II
+            </h1>
+        </div>
+        <div id="ogretim">
+            <h1>Öğretim Görevlisi:Doç.Dr. Kurt Orkun Aktaş</h1>
+            
+        </div>
+    </header>
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const models = document.querySelectorAll("#mainpage model-viewer");
+
+    models.forEach((model, idx) => {
+      model.classList.add("normal");
+
+      model.addEventListener("mouseenter", () => {
+        models.forEach((m, i) => {
+          if(i === idx) {
+            m.classList.add("grow");
+            m.classList.remove("shrink", "normal");
+          } else {
+            m.classList.add("shrink");
+            m.classList.remove("grow", "normal");
+          }
+        });
+      });
+
+      model.addEventListener("mouseleave", () => {
+        models.forEach(m => {
+          m.classList.remove("grow", "shrink");
+          m.classList.add("normal");
+        });
+      });
+    });
+  });
+</script>
+      
+<div id="mainpage">  
+    <div class="ddpart">
+          <model-viewer src="3d/anauydu.glb"    auto-rotate
+    camera-controls
+    ar
+    shadow-intensity="1"
+    exposure="1.2"
+    
+        
+    </model-viewer>
+    </div>
+     <div class="ddpart">
+          <model-viewer src="3d/uydu.glb"    auto-rotate
+    camera-controls
+    ar
+    shadow-intensity="1"
+    exposure="1.2"
+    
+        
+    </model-viewer>
+    </div></div>
+  <div id="3dboxtech">  
+    <div class="dpart">
+        <model-viewer src="3d/uydu2.glb"    auto-rotate
+            camera-controls
+            ar
+            shadow-intensity="1"
+            exposure="1.2"
+            style="background-color:#ccc; border-radius: 8px;">
+        </model-viewer>
+        <img src="img/teknikresim1.png" class="tknk" alt="">
+    </div>
+    <div class="dpart">
+          <model-viewer src="3d/uydu3.glb"    auto-rotate
+    camera-controls
+    ar
+    shadow-intensity="1"
+    exposure="1.2"
+    style="background-color:#ccc; border-radius: 8px;">
+        
+    </model-viewer>
+    </div>
+    <div class="dpart">
+          <model-viewer src="3d/uydu4.glb"   
+                auto-rotate
+                camera-controls
+                ar
+                shadow-intensity="1"
+                exposure="1.2"
+                style="background-color:#ccc; border-radius: 8px;">
+            </model-viewer>
+            <img src="img/teknikresim2.png" alt="" class="tknk">
+    </div>
+    <div class="dpart">
+        <model-viewer src="3d/uydu5.glb"   
+            auto-rotate
+            camera-controls
+            ar
+            shadow-intensity="1"
+            exposure="1.2"
+            style="background-color:#ccc; border-radius: 8px;">  
+        </model-viewer>
+        <img src="img/teknikresim3.png" alt="" class="tknk">
+    </div>
+    <div class="dpart">
+          <model-viewer src="3d/uydu7.glb"    auto-rotate
+    camera-controls
+    ar
+    shadow-intensity="1"
+    exposure="1.2"
+   style="background-color:#ccc; border-radius: 8px;">
+        
+    </model-viewer>
+    </div>
+    <div class="dpart">
+        <model-viewer src="3d/uydu8.glb"    
+            auto-rotate
+            camera-controls
+            ar
+            shadow-intensity="1"
+            exposure="1.2"
+            style="background-color:#ccc; border-radius: 8px;">    
+        </model-viewer>
+        <img src="img/teknikresim4.png" alt="" class="tknk">
+    </div>
+    <div class="dpart">
+        <model-viewer src="3d/uydu9.glb"    
+            auto-rotate
+            camera-controls
+            ar
+            shadow-intensity="1"
+            exposure="1.2"
+            style="background-color:#ccc; border-radius: 8px;">  
+        </model-viewer>
+        <img src="img/teknikresim5.png" alt="" class="tknk">
+    </div>
+    <div class="dpart">
+          <model-viewer src="3d/uydu10.glb"    auto-rotate
+    camera-controls
+    ar
+    shadow-intensity="1"
+    exposure="1.2"
+    style="background-color:#ccc; border-radius: 8px;">
+        
+    </model-viewer>
+    </div>
+    <div class="dpart">
+          <model-viewer src="3d/uydu11.glb"    auto-rotate
+    camera-controls
+    ar
+    shadow-intensity="1"
+    exposure="1.2"
+    style="background-color:#ccc; border-radius: 8px;">
+        
+    </model-viewer>
+    </div>
+    <div class="dpart">
+          <model-viewer src="3d/uydu12.glb"    auto-rotate
+    camera-controls
+    ar
+    shadow-intensity="1"
+    exposure="1.2"
+    style="background-color:#ccc; border-radius: 8px;">
+        
+    </model-viewer>
+    </div>
+</div>
+
+</body>
+</html>
